@@ -7,7 +7,7 @@ def hello_world():
 
 @app.route("/design")
 def design():
-    return render_template("design.html")
+    return render_template ("design.html")
 
 @app.route("/form")
 def form():
