@@ -38,7 +38,7 @@ def upload():
         print(skill3 )
         print(skill4 )
         print(about)
-    return "Uploaded"
+    return render_template("Design1.html",dname = name,dlname = lastname,dsch = school, dcol = college,dph = phone,demail = email,ds1 = skill1,ds2 = skill2,ds3 =skill3,ds4 = skill4,dabout = about)
 
 if __name__=="__main__":       
  app.run(debug= True)
