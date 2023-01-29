@@ -1,13 +1,12 @@
-from flask import Flask, render_template, request
+from flask import Flask,render_template, request
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
+@app.route("/")
+def home():
     return render_template("index.html")
-
 @app.route("/design")
 def design():
-    return render_template ("design.html")
+    return render_template("design.html")
 
 @app.route("/form")
 def form():
@@ -40,7 +39,5 @@ def upload():
         print(skill4 )
         print(about)
     return "Uploaded"
-
-
-if __name__ ==("__main__"):
-  app.run(debug=True)
+        
+app.run(debug= True)
