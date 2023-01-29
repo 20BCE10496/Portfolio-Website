@@ -15,13 +15,13 @@ def form():
 @app.route("/upload", methods = ["GET","POST"])
 def upload():
     if request.method == "POST":
-        name = request.form.get("firstname")
         lastname = request.form.get("lastname")
+        name = request.form.get("firstname")
         school = request.form.get("school")
         college = request.form.get("college")
         phone = request.form.get("phone")
-        email = request.form.get("email")
         skill1 = request.form.get("skill1")
+        email = request.form.get("email")
         skill2 = request.form.get("skill2")
         skill3 = request.form.get("skill3")
         skill4 = request.form.get("skill4")
@@ -39,5 +39,6 @@ def upload():
         print(skill4 )
         print(about)
     return "Uploaded"
-        
-app.run(debug= True)
+
+if __name__=="__main__":       
+ app.run(debug= True)
