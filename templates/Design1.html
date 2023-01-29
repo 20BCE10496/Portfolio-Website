@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/aldsicon.png">
-  <link rel="icon" type="image/png" href="assets/img/aldsicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/aldsicon.png">
+  <link rel="icon" type="image/png" href="../static/img/aldsicon.png">
   <title>
     {{dname}}'s Porfolio - Made By Amisha Goyal
   </title>
@@ -14,11 +14,12 @@
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <!-- Nucleo Icons -->
  
-  <link href=" {{url_for('static',filename = 'assets/css/nucleo-icons.css')}}" rel="stylesheet" />
+  <link href=" {{url_for('static',filename = '../static/css/nucleo-icons.css')}}" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="{{url_for('static',filename = 'assets/css/blk-design-system.css')}}" rel="stylesheet" />
+  <link rel="stylesheet" href="../static/css/blk-design-system.css">
+  <link href="{{url_for('static',filename = '../static/css/blk-design-system.css')}}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{{url_for('static',filename = 'assets/demo/demo.css')}}" rel="stylesheet" />
+  <!-- <link href="{{url_for('static',filename = '../static/demo/demo.css')}}" rel="stylesheet" /> -->
 </head>
 
 <body class="profile-page">
@@ -27,8 +28,8 @@
   <!-- End Navbar -->
   <div class="wrapper">
     <div class="page-header">
-      <img src="assets/img/dots.png" class="dots">
-      <img src="assets/img/path4.png" class="path">
+      <img src="../static/img/dots.png" class="dots">
+      <img src="../static/img/path4.png" class="path">
       <div class="container align-items-center">
         <div class="row">
           <div class="col-lg-6 col-md-6">
@@ -50,7 +51,7 @@
           <div class="col-lg-4 col-md-6 ml-auto mr-auto">
             <div class="card card-coin card-plain">
               <div class="card-header">
-                <img src="assets/img/dhananjay.jfif" class="img-center img-fluid rounded-circle">
+                <img src="static/images/{{img}}" class="img-center img-fluid rounded-circle">
                 <h4 class="title">Profile</h4>
               </div>
               <div class="card-body">
@@ -201,23 +202,23 @@
    
   </div>
   <!--   Core JS Files   -->
-  <script src="{{url_for('static',filename = 'assets/js/core/jquery.min.js')}}" type="text/javascript"></script>
-  <script src="{{url_for('static',filename = 'assets/js/core/popper.min.js')}}" type="text/javascript"></script>
-  <script src="{{url_for('static',filename = 'assets/js/core/bootstrap.min.js')}}" type="text/javascript"></script>
-  <script src="{{url_for('static',filename = 'assets/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
+  <script src="{{url_for('static',filename = '../static/js/core/jquery.min.js')}}" type="text/javascript"></script>
+  <script src="{{url_for('static',filename = '../static/js/core/popper.min.js')}}" type="text/javascript"></script>
+  <script src="{{url_for('static',filename = '../static/js/core/bootstrap.min.js')}}" type="text/javascript"></script>
+  <script src="{{url_for('static',filename = '../static/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
   <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-  <script src="{{url_for('static',filename = 'assets/js/plugins/bootstrap-switch.js')}}"></script>
+  <script src="{{url_for('static',filename = '../static/js/plugins/bootstrap-switch.js')}}"></script>
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-  <script src="{{url_for('static',filename = 'assets/js/plugins/nouislider.min.js')}}" type="text/javascript')}}"></script>
+  <script src="{{url_for('static',filename = '../static/js/plugins/nouislider.min.js')}}" type="text/javascript')}}"></script>
   <!-- Chart JS -->
-  <script src="{{url_for('static',filename = 'assets/js/plugins/chartjs.min.js')}}"></script>
+  <script src="{{url_for('static',filename = '../static/js/plugins/chartjs.min.js')}}"></script>
   <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
-  <script src="{{url_for('static',filename = 'assets/js/plugins/moment.min.js')}}"></script>
-  <script src="{{url_for('static',filename = 'assets/js/plugins/bootstrap-datetimepicker.js')}}" type="text/javascript"></script>
+  <script src="{{url_for('static',filename = '../static/js/plugins/moment.min.js')}}"></script>
+  <script src="{{url_for('static',filename = '../static/js/plugins/bootstrap-datetimepicker.js')}}" type="text/javascript"></script>
   <!-- Black Dashboard DEMO methods, don't include it in your project! -->
-  <script src="{{url_for('static',filename = 'assets/demo/demo.js')}}"></script>
+  <script src="{{url_for('static',filename = '../static/demo/demo.js')}}"></script>
   <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
-  <script src="{{url_for('static',filename = 'assets/js/blk-design-system.min.js')}}" type="text/javascript"></script>
+  <script src="{{url_for('static',filename = '../static/js/blk-design-system.min.js')}}" type="text/javascript"></script>
 </body>
 
 </html>
