@@ -1,7 +1,8 @@
-from flask import Flask,render_template, request
+from flask import Flask,render_template, request,session
 import uuid
 import os
 app = Flask(__name__)
+app.secret_key ="SecretKey"
 
 @app.route("/")
 def home():
@@ -10,12 +11,20 @@ def home():
 def design():
     return render_template("design.html")
 
-@app.route("/form/<string:design>")
-def form():
+@app.route("/form/<string:design>", methods=["GET","POST"])
+def form(design):
+    
+    session["design_sess"] = design
     return render_template("form.html")
 
 @app.route("/upload", methods = ["GET","POST"])
 def upload():
+    design_upload = session.get("design_sess")
+    if design_upload == "desig3":
+        design_name = "Design1.html"
+    elif design_upload == "desig2":
+        design_name = "Design2.html"
+        
     if request.method == "POST":
         lastname = request.form.get("lastname")
         name = request.form.get("firstname")
@@ -49,7 +58,7 @@ def upload():
         img.save(f"static/images/{img.filename}")
         img_new_name=f"{key} {img.filename}"
         os.rename(f"static/images/{img.filename}",f"static/images/{img_new_name}" )
-    return render_template("Design1.html",dname = name,dlname = lastname,dg= gethub, dl=linkedin, dsch = school, dcol = college,dph = phone, img= img_new_name, demail = email,ds1 = skill1,ds2 = skill2,ds3 =skill3,ds4 = skill4,dabout = about)
+    return render_template(design_name ,dname = name,dlname = lastname,dg= gethub, dl=linkedin, dsch = school, dcol = college,dph = phone, img= img_new_name, demail = email,ds1 = skill1,ds2 = skill2,ds3 =skill3,ds4 = skill4,dabout = about)
 
 if __name__=="__main__":       
  app.run(debug= True)

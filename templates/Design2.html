@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Names's Protfolio</title>
+  <title>{{dname}} Protfolio</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -12,17 +12,17 @@
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/assests/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="../static/assests/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../static/assests/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="../static/assests/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="../static/assests/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../static/assests/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="../static/assests/css/style.css" rel="stylesheet">
 
 
 </head>
@@ -67,8 +67,8 @@
       <div class="table-cell">
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="intro-title mb-4">I am Name Lastname</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">skill1,skill2,skill3,skill4</span><strong class="text-slider"></strong></p>
+          <h1 class="intro-title mb-4">I am {{dname}} {{dlname}}</h1>
+          <p class="intro-subtitle"><span class="text-slider-items">{{ds1}} {{ds2}} {{ds3}} {{ds4}}</span><strong class="text-slider"></strong></p>
         </div>
       </div>
     </div>
@@ -85,15 +85,15 @@
                 <div class="row">
                   <div class="col-sm-6 col-md-5">
                     <div class="about-img">
-                      <img src="img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                      <img src="../static/assests/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-7">
                     <div class="about-info">
-                      <p><span class="title-s">Name: </span> <span>Name Lastname</span></p>
-                      <p><span class="title-s">Profile: </span> <span>Skill1</span></p>
-                      <p><span class="title-s">Email: </span> <span>email</span></p>
-                      <p><span class="title-s">Phone: </span> <span>Contanct No.</span></p>
+                      <p><span class="title-s">Name: </span> <span>{{dname}} {{dlname}}</span></p>
+                      <p><span class="title-s">Profile: </span> <span>{{ds1}}</span></p>
+                      <p><span class="title-s">Email: </span> <span>{{demail}}</span></p>
+                      <p><span class="title-s">Phone: </span> <span>{{dcontact}}</span></p>
                     </div>
                   </div>
                 </div>
@@ -164,7 +164,7 @@
             <div class="service-content">
               <h2 class="s-title">School</h2>
               <p class="s-description text-center">
-               School Name
+               {{dsch}}
               </p>
             </div>
           </div>
@@ -177,7 +177,7 @@
             <div class="service-content">
               <h2 class="s-title">College</h2>
               <p class="s-description text-center">
-               College Name
+               {{dcol}}
               </p>
             </div>
           </div>
@@ -233,7 +233,7 @@
               <p class="copyright">&copy; 2021  <strong>Portfolio Maker Website </strong>.</p>
               <div class="credits">
              
-                Edited by <a href="https://www.youtube.com/channel/UCmOBuijDvNgUMlqpzrwEBcw">CODE WITH DHRUV</a>
+                Edited by <a href="https://github.com/20BCE10496">CODE WITH Amisha</a>
               </div>
             </div>
           </div>
@@ -247,21 +247,21 @@
   <div id="preloader"></div>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/popper/popper.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/counterup/jquery.waypoints.min.js"></script>
-  <script src="lib/counterup/jquery.counterup.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <script src="lib/typed/typed.min.js"></script>
+  <script src="../static/assests/lib/jquery/jquery.min.js"></script>
+  <script src="../static/assests/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="../static/assests/lib/jquery/popper/popper.min.js"></script>
+  <script src="../static/assests/lib/jquery/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../static/assests/lib/jquery/easing/easing.min.js"></script>
+  <script src="../static/assests/lib/jquery/counterup/jquery.waypoints.min.js"></script>
+  <script src="../static/assests/lib/jquery/counterup/jquery.counterup.js"></script>
+  <script src="../static/assests/lib/jquery/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../static/assests/lib/jquery/lightbox/js/lightbox.min.js"></script>
+  <script src="../static/assests/lib/jquery/typed/typed.min.js"></script>
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="../static/assests/js/main.js"></script>
 
 </body>
 </html>
