@@ -10,7 +10,7 @@ def home():
 def design():
     return render_template("design.html")
 
-@app.route("/form")
+@app.route("/form/<string:design>")
 def form():
     return render_template("form.html")
 
