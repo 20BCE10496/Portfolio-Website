@@ -1,6 +1,7 @@
 from flask import Flask,render_template, request,session
 import uuid
 import os
+import schedule
 app = Flask(__name__)
 app.secret_key ="SecretKey"
 
@@ -59,6 +60,12 @@ def upload():
         img_new_name=f"{key} {img.filename}"
         os.rename(f"static/images/{img.filename}",f"static/images/{img_new_name}" )
     return render_template(design_name ,dname = name,dlname = lastname,dg= gethub, dl=linkedin, dsch = school, dcol = college,dph = phone, img= img_new_name, demail = email,ds1 = skill1,ds2 = skill2,ds3 =skill3,ds4 = skill4,dabout = about)
-
-if __name__=="__main__":       
- app.run(debug= True)
+   
+def delete():
+    files=os.listdir("static\images.png")
+    for f in files:
+        os.remove(f"static\images.png/{f}")
+       
+if __name__=="__main__":    
+    schedule.every().day.at("23:59").do(delete)   
+app.run(debug= True)
